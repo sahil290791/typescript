@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './TodoList.css';
+
 interface TodoListProps {
   items: {
     id: number,
@@ -14,7 +16,7 @@ const TodoList: React.FC<TodoListProps> = (props) => {
     <ul>
       {items.map((todo) => {
         return (
-          <li key={todo.id}>
+          <li key={todo.id} className="todo-item">
             <span>
               {todo.text}
             </span>

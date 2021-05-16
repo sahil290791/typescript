@@ -1,7 +1,9 @@
 import React, { useRef } from 'react';
 
+import './NewTodo.css';
+
 interface NewTodoProps {
-  addTodoHandler: (text: string) => void
+  addTodoHandler: (text: string) => void;
 }
 
 const NewTodo: React.FC<NewTodoProps> = (props) => {
@@ -18,7 +20,7 @@ const NewTodo: React.FC<NewTodoProps> = (props) => {
 
   return (
     <form>
-      <div>
+      <div className="form-control">
         <label htmlFor="todo-text">Todo Text</label>
         <input type="text" id="todo-text" ref={textInputRef} />
       </div>
